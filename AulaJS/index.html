@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/style.css">
+    <title>Aula 01 - JavaScript</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h2 class="h2">Lista de Exercicios</h2>
+        </header>
+        <main>
+            <div class="Task1">
+                <h1>Task1</h1>
+                <input type="text" id="IptCidadeNatal" class="inputNome" placeholder="Digite sua cidade natal">
+                <input type="date" id="iptDtNasc" class="inputNome" placeholder="">
+                <button class="" onclick="exibirMensagem()">Enviar</button>
+            </div><br><br>
+            <div class="Task2">
+                <h1>Task2</h1>
+                <input type="text" id="iptAltura" class="inputNome" placeholder="Altura">
+                <input type="text" id="iptPeso" class="inputNome" placeholder="Peso">
+                <button class="" onclick="exibirMensagemTask2()">Fale Comigo</button>
+            </div><br><br>
+            <div class="Task3">
+                <h1>Task3</h1>
+                <input type="text" id="iptTime" class="inputNome" placeholder="Nome do time">
+                <input type="number" id="iptMundial" class="inputNome" placeholder="Quantidade de Mundial">
+                <button class="" onclick="exibirMensagemTask3()">Amo meu time</button>
+            </div><br><br>
+            <div class="Task4">
+                <h1>Task4</h1>
+                <input type="text" id="iptNameRua" class="inputNome" placeholder="Insira seu endereço">
+                <button class="" onclick="exibirMensagemTask4()">Onde eu moro?</button><br>
+                <input type="number" id="iptNumCasa" class="inputNome" placeholder="Numero da casa">
+                <button class="" onclick="exibirMensagemTask4Complete()">Gerar endereço</button>
+            </div>
+        </main>
+        <footer></footer>
+    </div>
+</body>
+</html>
+<script>
+    function exibirMensagemTask1(){
+        alert(`Você nasceu na cidade ${IptCidadeNatal.value} em ${iptDtNasc.value}`)
+    }
+    function exibirMensagemTask2(){
+        alert(`Você pesa ${iptPeso.value}kg e tem ${iptAltura.value}m de altura.`)
+    }
+    function exibirMensagemTask3(){
+        alert(`O ${iptTime.value} tem ${iptMundial.value} mundiais da FIFA.`)
+    }
+    function exibirMensagemTask4(){
+        alert(`Seu logradouro é:  ${iptNameRua.value}.`)
+    }
+    function exibirMensagemTask4Complete(){
+        alert(`Você mora na rua:  ${iptNameRua.value} número ${iptNumCasa.value}.`)
+    }
+    
+</script>

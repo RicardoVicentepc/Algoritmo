@@ -1,0 +1,68 @@
+html
+{
+    margin: 0;
+    padding: 0;
+}
+
+body
+{
+    background-color: rgb(112, 122, 122);
+}
+
+/* Classes */
+.h2{
+    text-decoration: solid;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2em;
+    color: aliceblue;
+}
+.container{
+    text-align: center;
+}
+.butao{
+    margin: 10px;
+    padding: 15px;
+    background-color: black;
+    color: white;
+    border-radius: 100px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.inputNome{
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.enviar{
+    padding: 10px;
+    border-radius: 10px;
+    background-color: blue;
+}
+.Task1{
+    background-color: #9e9c9e;
+    color: white;
+    border-radius: 20px;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+.Task2{
+    background-color: #9e9c9e;
+    color: white;
+    border-radius: 20px;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+.Task3{
+    background-color: #9e9c9e;
+    color: white;
+    border-radius: 20px;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+.Task4{
+    background-color: #9e9c9e;
+    color: white;
+    border-radius: 20px;
+    margin-left: 25%;
+    margin-right: 25%;
+}
