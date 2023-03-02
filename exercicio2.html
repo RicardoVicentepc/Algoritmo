@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Insira a quantidade de refrigerante por dia : <input type="number" id="iptQtdRefri">
+    <button onclick="CalcularRefris()">Quantos Refris?</button>
+    <div id="MostraMensagem"></div>
+</body>
+</html>
+<script>
+    function CalcularRefris() {
+        var qtdPorAno = Number(iptQtdRefri.value) * 365
+        MostraMensagem.innerHTML = `Você consome ${qtdPorAno} de refrigerante por ano.`
+        if(qtdPorAno >= 500) {
+        MostraMensagem.innerHTML = `Cuidado com diabetes.`
+        }
+    }
+</script>

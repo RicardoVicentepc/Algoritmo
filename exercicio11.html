@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Insira a quantidade de filhos : <input id="iptQtdFilhos" type="number">
+    <button onclick="Filhos()">Analisar Familia</button>
+    <div id="ExibirMensagem"></div>
+</body>
+
+</html>
+<script>
+    function Filhos() {
+        var qtdFilho = Number(iptQtdFilhos.value)
+        if (qtdFilho >= 1) {
+            ExibirMensagem.innerHTML = `Não tem TV`
+        }
+        if (qtdFilho >= 2) {
+            ExibirMensagem.innerHTML = `Não tem TV<br>Não tem Internet`
+        }
+        if (qtdFilho >= 3) {
+            ExibirMensagem.innerHTML = `Não tem TV<br>Não tem Internet<br>Não tem video game.`
+        }
+        if (qtdFilho >= 4) {
+            ExibirMensagem.innerHTML = `Não tem TV<br>Não tem Internet<br>Não tem video game.<br>Não tem Netflix.`
+        }
+    }
+</script>

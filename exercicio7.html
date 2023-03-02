@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Insira o saldo da conta : <input id="iptSaldo" type="number"><br>
+    Insira o valor a retirar : <input id="iptDebito" type="number"><br>
+    <button onclick="CalcularSaldoContar()">Analisar conta.</button>
+    <div id="ExibirMensagem"></div>
+</body>
+
+</html>
+<script>
+    function CalcularSaldoContar() {
+        var saldo = Number(iptSaldo.value) - Number(iptDebito.value)
+        ExibirMensagem.innerHTML = `O saldo atual da conta corrente é R$${saldo}.`
+        if(saldo < 0) {
+        ExibirMensagem.innerHTML = `<strong style="color:red">O saldo atual da conta corrente é R$${saldo}.</strong>`
+        }
+    }
+</script>

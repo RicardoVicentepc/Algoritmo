@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Solicite o peso total do elevador : <input id="iptPesoElevador" type="number">
+    <button onclick="VerificarPeso()">Ligar Elevador</button>
+</body>
+</html>
+
+<script>
+    function VerificarPeso(){
+        var pesoElevador = Number(iptPesoElevador.value)
+        if(pesoElevador < 500){
+            alert("Elevador vai se mover.")
+        }
+        if(pesoElevador >= 500){
+            alert("Alguem precisa descer do elevador.")
+        }
+    }
+</script>

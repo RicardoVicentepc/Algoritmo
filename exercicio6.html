@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Insira a Renda Familiar<input id="iptRenda" type="number"><br>
+    Insira o valor da Prestação<input id="iptValorPresta" type="number"><br>
+    <button onclick="Financeiro()">Verificar Financeiro.</button>
+    <div id="ExibirMensagem"></div>
+</body>
+
+</html>
+<script>
+    function Financeiro() {
+        var calcularPrestacao = (Number(iptValorPresta.value) / Number(iptRenda.value)) * 100
+        ExibirMensagem.innerHTML = `a prestação corresponde a ${calcularPrestacao}% da renda familiar`
+        var porcRendaMax = (Number(iptRenda.value) * 30) / 100
+        if (calcularPrestacao > porcRendaMax) {
+            ExibirMensagem.innerHTML = `<strong style="color:red">Será necessário complementar a renda familiar</strong>`
+        }
+        console.log(porcRendaMax)
+    }
+</script>

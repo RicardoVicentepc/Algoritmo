@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    nota 1 :<input id="iptNota1" type="number"><br>
+    nota 2 :<input id="iptNota2"type="number"><br>
+    nota 3 :<input id="iptNota3"type="number"><br>
+
+    <button onclick="CalcularMedia()">Calcular Desempenho</button>
+    <div style= "color:blue;" id="MostrarMensagem"></div>
+</body>
+</html>
+
+<script>
+    function CalcularMedia() {
+        var calcularMedia = (Number(iptNota1.value) + Number(iptNota2.value)
+            + Number(iptNota3.value)) / 3
+            alert(`Sua média foi de ${calcularMedia}`)
+            MostrarMensagem.innerHTML = `<i><strong>${calcularMedia}</strong><i/>`
+        if(calcularMedia > 9.4){
+            alert('Parabens você é fora de serie.')
+        }
+    }
+</script>
