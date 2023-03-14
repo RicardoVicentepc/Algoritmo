@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Insira a temperatura do ambiente <input type="number" id="ipt_Ambiente">
+    <button onclick="VerificarClima()">Verificar Clima</button>
+    <div id="ExibirMsg"></div>
+</body>
+</html>
+<script>
+    function VerificarClima(){
+
+    var temperatura = Number(ipt_Ambiente.value)
+    if(temperatura < 10){
+        ExibirMsg.innerHTML = `<img width="50%" src="http://caldobom.com.br/uploads/2019/03/como-preservar-os-nutrientes-dos-alimentos.jpg">`
+    }else{
+        ExibirMsg.innerHTML = `<img width="50%" src="https://thumbs.dreamstime.com/z/alimento-podre-24008365.jpg">`
+    }
+
+}
+
+</script>

@@ -1,0 +1,10 @@
+body{
+    background: #c0f0c0bd;
+    text-align: center;
+    margin-top: 200px;
+}
+#ipt_nome, #ipt_idade{
+    padding: 10px;
+    margin: 5px;
+    border-radius: 10px;
+}

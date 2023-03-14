@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Insira a quantidade de bombons comprados : <input type="number" id="ipt_qtdBomBom">
+    <button onclick="CalcularBomBom()">Compra</button>
+    <div id="ExibirMsg"></div>
+</body>
+
+</html>
+<script>
+    function CalcularBomBom() {
+        var qtdBomBom = Number(ipt_qtdBomBom.value)
+        var precoBomBom = 0 
+        if (qtdBomBom > 12) {
+           precoBomBom = qtdBomBom * 2.5
+            ExibirMsg.innerHTML = `O  valor da sua compra foi de R$${precoBomBom}`
+        }else{
+            precoBomBom = 3 * qtdBomBom
+            ExibirMsg.innerHTML = `O  valor da sua compra foi de R$${precoBomBom}`
+
+        }
+    }
+</script>
