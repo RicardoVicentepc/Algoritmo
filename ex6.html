@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Qual time você torce : <input type="text" id="ipt_nameTime">
+    <button onclick="FalarTime()">Falar sobre esse time</button>
+    <div id="ExibirMsg"></div>
+</body>
+</html>
+<script>
+    function FalarTime(){
+        var nomeTime = ipt_nameTime.value
+        if(nomeTime == 'Corinthians')
+            ExibirMsg.innerHTML = `
+                <style>
+                body{
+                    background-color: black;
+                }    
+                </style>
+                    <span style="color:#FFF">Salve o Corinthians</span>`
+        else if(nomeTime == 'Palmeiras')
+            ExibirMsg.innerHTML = `
+                <style>
+                body{
+                    background-color: green;
+                }    
+                </style>
+                    <span style="color:#FFF">Salve o alviverde imponente</span>`
+        else if(nomeTime == 'Santos')
+        ExibirMsg.innerHTML = `Agora quem dá a bola é o Santos`
+        else if(nomeTime == 'São Paulo')
+        ExibirMsg.innerHTML = `
+                <style>
+                body{
+                    background-color: black;
+                }    
+                </style>
+                    <span style="color:#F00">Salve o tricolor paulista</span>`
+}
+</script>

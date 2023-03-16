@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Quantos pães franceses você come por dia :  <input type="number" id="ipt_qtdPaes"><br>
+    Quantos pacotes de bolacha recheada você consome ṕor dia : <input type="number" id="ipt_qtdBolacha"><br>
+    Quantos copo de achocolatado você consome por dia : <input type="number" id="ipt_qtdAchocolatado"><br>
+    <button onclick="calcularCalorias()">Verficar Calorias</button>
+    <div id="ExibirMsg"></div>
+</body>
+</html>
+<script>
+    function calcularCalorias(){
+        var caloriasPaes = Number(ipt_qtdPaes.value) * 50;
+        var caloriasBolacha = Number(ipt_qtdBolacha.value) * 80
+        var caloriasAchocolato = Number(ipt_qtdAchocolatado.value) * 70
+        var totalCalorias =  caloriasAchocolato + caloriasPaes + caloriasBolacha
+        if(totalCalorias < 200)
+        ExibirMsg.innerHTML = `Parabéns, vai sair em forma da quarentena!`
+        else if(totalCalorias >= 200)
+            if(totalCalorias <= 400)
+            ExibirMsg.innerHTML = `Cuidado, vai ficar mais "fofinho(a)`
+        else if(totalCalorias > 400)
+        ExibirMsg.innerHTML = `Bom, acho que muitos não vão te reconhecer após a quarentena`
+
+    }
+</script>

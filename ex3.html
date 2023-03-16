@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Insira a temperatura: <input type="number" id="ipt_Temperatura">
+    <Button onclick="Clima()">Ver Clima</Button>
+    <div id="ExibirMsg"></div>
+</body>
+</html>
+<script>
+    function Clima(){
+        var temperatura = Number(ipt_Temperatura.value)
+        if(temperatura < 14)
+            ExibirMsg.innerHTML = `Congelante`
+        else if(temperatura >= 14)
+            if(temperatura < 21)
+                ExibirMsg.innerHTML = `Com Frio`
+        else if(temperatura >= 21)
+            if(temperatura < 24)
+                ExibirMsg.innerHTML = `Confortavel`
+        else if(temperatura >= 24)
+            if(temperatura < 31)
+                ExibirMsg.innerHTML = `Com Calor`
+        else   
+            ExibirMsg.innerHTML = `Calor escaldante`
+
+
+
+
+    }
+</script>
