@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Insira seu login : <input type="text" id="iptLogin">
+    Insira sua senha : <input type="password" id="iptSenha">
+    Insira seu codigo de Segurança: <input type="text" id="iptCodSeguranca">
+    <button onclick="Login()">Entrar</button>
+</body>
+</html>
+
+<script>
+    function Login(){
+        var login = iptLogin.value
+        var senha = iptSenha.value
+        var cod = iptCodSeguranca.value
+        if(login == 'sptech' && senha == 'digital' && cod == '123')
+            alert("Usuário autenticado com sucesso")
+        else
+            alert("Falha na Autenticado")
+    }
+</script>

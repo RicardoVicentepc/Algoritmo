@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Insira a quantidade de passagens que deseja adquirir: <input type="number" id="iptQtdPass"><br>
+    <button onclick="Passagem()">Comprar</button>
+</body>
+</html>
+<script>
+    function Passagem(){
+        var qtdPassagem = Number(iptQtdPass.value)
+        var valorPassagem = 4.4
+        var totalPassagem
+        if(qtdPassagem >= 8 && qtdPassagem <= 50)
+        {
+            if(qtdPassagem >= 8 && qtdPassagem <= 19 ){
+                valorPassagem = valorPassagem * .97
+                totalPassagem = valorPassagem * qtdPassagem
+                alert(`Total a pagar ${totalPassagem.toFixed(2)}`)
+            }
+            else if(qtdPassagem >= 20 && qtdPassagem <= 49){
+                valorPassagem = valorPassagem * .95
+                totalPassagem = valorPassagem * qtdPassagem
+                alert(`Total a pagar ${totalPassagem.toFixed(2)}`)
+            }
+            else if(qtdPassagem == 50 ){
+                valorPassagem = valorPassagem * .93
+                totalPassagem = valorPassagem * qtdPassagem
+                alert(`Total a pagar ${totalPassagem.toFixed(2)}`)
+            }
+
+        }else{
+            alert("Quantidade inválida para o Fidelidade!")
+        }
+ 
+ 
+ }
+</script>

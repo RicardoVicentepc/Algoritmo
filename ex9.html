@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Insira a altura inicial : <input type="number" id="iptAltInicial">
+    Insira a altura final : <input type="number" id="iptAltFinal">
+    <br>
+    Insira seu nome : <input type="text" id="iptNome">
+    Insira a altura do candidato : <input type="number" id="iptAlturaCand">
+    <button onclick="VerificarAltura()">VerificarAltura</button>
+    <div id="ExibirMsg"></div>
+</body>
+</html>
+<script>
+    function VerificarAltura(){
+        var altInicial = Number(iptAltInicial.value)
+        var altFinal = Number(iptAltFinal.value)
+        var nomeCand = iptNome.value
+        var altCand = Number(iptAlturaCand.value)
+
+        if(altInicial > 1 && altFinal >= altInicial){
+            ExibirMsg.innerHTML = `O candidato ${nomeCand} com altura de ${altCand} participará do processo de seleção de piloto`
+        }else{
+            alert(`Infelizmente o candidato ${nomeCand} com altura de ${altCand} não atende os requisitos`)
+
+        }
+    }
+</script>

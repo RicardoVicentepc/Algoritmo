@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=s, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Insira o horario do dia que vc assiste netflix : <input type="number" id="iptHrNet">
+    <button onclick="Recomendacao()">Ver Recomendação</button>
+    <div id="ExibirMsg"></div>
+</body>
+</html>
+<script>
+    function Recomendacao(){
+    var horas = Number(iptHrNet.value)
+    if(horas >= 19 && horas <= 21)
+        ExibirMsg.innerHTML= `Não é recomendavel que você assista sua serie favorita on horario ${horas}`
+    else 
+        ExibirMsg.innerHTML = `O horário X é adequado para assistir sua série favorita!`
+    }
+    </script>
