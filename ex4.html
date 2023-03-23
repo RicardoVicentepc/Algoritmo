@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Selecione o meio de pagamento :
+     <select name="select" id="iptFormaPagamento">
+        <option value="Dinheiro">Dinheiro</option>
+        <option value="Cartão de Débito">Cartão de Debito</option>
+        <option value="Cartão de Credito">Cartão de Credito</option>
+        <option value="Boleto">Boleto</option>
+    </select> 
+    <button onclick="AnalisarCompra()">Analisar Compra</button>
+    <div id="ExibirMsg"></div>
+</body>
+</html>
+<script>
+    function AnalisarCompra(){
+        var formaPag = iptFormaPagamento.value
+        if(formaPag == 'Dinheiro' || formaPag == 'Boleto')
+            ExibirMsg.innerHTML = `Você terá que pagar a vista.`
+        else if(formaPag == 'Cartão de Débito' ||  formaPag == 'Cartão de Credito')
+            ExibirMsg.innerHTML = `Pagamento pode ser parcelado.`
+
+    }
+</script>

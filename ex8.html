@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+Insira o nome da empresa: <input type="text" id="ipt_nomeEmpresa">    
+Insira o valor da bolsa da empresa : <input type="number" id="ipt_bolsaEmpresa">
+Insira o o VR da empresa : <input type="text" id="ipt_VR">
+Insira o tempo de deslocamento : <input type="number" id="ipt_Deslocamento">
+<button onclick="Empresa()">É preferida?</button>
+<div id="ExibirMsg"></div>
+</body>
+</html>
+<script>
+    function Empresa(){
+        var nomeEmpresa = ipt_nomeEmpresa.value
+        var valorBolsa = Number(ipt_bolsaEmpresa.value)
+        var vrEmpresa = Number(ipt_VR.value)
+        var deslocamento = Number(ipt_Deslocamento.value)
+
+        if(valorBolsa >= 1800 || vrEmpresa == "sim" || deslocamento >= 20 && deslocamento <= 30)
+        ExibirMsg.innerHTML = `A empresa ${nomeEmpresa} é uma de suas preferências`
+        else
+        ExibirMsg.innerHTML = `A empresa ${nomeEmpresa} está fora da sua lista`
+    }
+
+</script>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=s, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Insira o valor da sua renda Individual : <input type="number" id="iptRendaIndividual"><br>
+    Insira o valor da renda Familiar : <input type="number" id="iptRendaFamilia">
+    <button onclick="Beneficio()">Terei o beneficio</button>
+</body>
+</html>
+<script>
+    function Beneficio(){
+        var rendaIndiv = Number(iptRendaIndividual.value)
+        var rendafamily = Number(iptRendaFamilia.value)
+        if(rendaIndiv >= 2000 || rendafamily >= 3000)
+            alert("Você terá direito ao auxilio")
+        else    
+            alert("Sem direito ao auxilio")
+    }

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>CALCULDORA DE CANSAÇO DO ALUNO SPTech.</h1>
+    Meio Transporte : 
+    <select name="select" id="iptTransporte">
+        <option value=""></option>
+        <option value="Onibus">Onibus</option>
+        <option value="Metro"> Metro</option>
+        <option value="Carro">Carro</option>
+        <option value="Bicicleta">Bicicleta</option>
+    </select><br>
+    Insira sua distancia : 
+    <button onclick="Cansaco()">Calcular Cansaço</button>
+</body>
+</html>
+<script>
+    function Cansaco(){
+        var transporte = iptTransporte.value
+        if(transporte == "Carro" || transporte == "Bicicleta" )
+            alert("Tá tranquilo... :)")
+        else if(transporte == "Metro")
+            alert("Um pouco cansado :/")
+        else if(transporte == "Onibus" || transporte == "Lotação")
+            alert("Vish... vive cansado :(")
+        else 
+            alert("Selecione um opção")
+    }
+</script>
