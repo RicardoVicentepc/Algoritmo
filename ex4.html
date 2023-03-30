@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="text-align: center;">
+    Quantos pixels: <input type="number" id="iptPixel">
+    <button onclick="Tamanho()">Tamanho</button>
+    <br><br><br>
+    <button onclick="Esquerda()">Esquerda</button>
+    <button onclick="Direita()">Direita</button>
+    <button onclick="Cima()">Cima</button>
+    <button onclick="Baixo()">Baixo</button><br><br><br>
+    <img src="https://m.media-amazon.com/images/I/61Lfb+sv5IL._AC_SY741_.jpg" id="img" width="100px">
+
+
+</body>
+</html>
+<script>
+    var mover = 20
+    function Tamanho(){
+        var pixel = Number(iptPixel.value)
+        img.style.width = pixel + "px"
+    }
+    function Esquerda(){
+        img.style.marginLeft = mover++ + "px"
+        e.keyCode   
+    }
+    function Direita(){
+        img.style.marginLeft = -mover++ + "px"
+    }
+    function Cima(){
+        img.style.marginTop = -mover++ + "px"
+    }
+    function Baixo(){
+        img.style.marginTop = mover++ + "px"
+    }
+</script>
