@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <button onclick="ImagemUp()" id="btnAumentar">Aumentar</button>
+    <button onclick="ImagemLow()" id="btnReduzir" value="btnReduzir">Abaixar</button>
+    <div id="imgLegal"></div>
+
+</body>
+
+</html>
+<script>
+    var pixel = 0
+    
+    function ImagemUp() {
+        var up = imgLegal.innerHTML = `<img src="file:///C:/Users/Ricar/OneDrive/Imagens/ImgsFundo/Tom.jpg" width="${pixel}px;">`
+        pixel += 10;
+        return 
+    }
+    function ImagemLow() {
+        pixel -= 10;
+    }
+</script>

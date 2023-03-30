@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Insira seu salario <input type="number" id="iptGrana">
+    <button onclick="Grana()">Confirmar Salario</button>
+    <button onclick="Pagar100()">Pagar conta de 100</button>
+    <button onclick="Pagar500()">Pagar conta de 500</button>
+    <button onclick="Loteria()">Aumentar 2000</button>
+    <div id="ExibirGrana"></div>
+</body>
+
+</html>
+<script>
+    var pagar = 0;
+
+    function Grana()
+    {
+        var salario = Number(iptGrana.value);
+        ExibirGrana.innerHTML = `Grana atual R$${salario}.`
+    }
+
+    function Pagar100() 
+    {
+        var salario = Number(iptGrana.value);
+            pagar -= 100
+        var saldoAtualizado = salario - -pagar
+        if(saldoAtualizado <= -1){
+            alert("Você pagou tudo meu nobre")
+        }else{
+            ExibirGrana.innerHTML = `Grana atual R$${saldoAtualizado}.`
+        }
+        
+    }
+    function Pagar500()
+    {
+        var salario = Number(iptGrana.value);
+            pagar -= 500
+        var saldoAtualizado = salario - -pagar
+        if(saldoAtualizado <= -1){
+            alert("Você pagou tudo meu nobre") 
+        }else{
+            ExibirGrana.innerHTML = `Grana atual R$${saldoAtualizado}.`
+        }
+    }
+    function Loteria()
+    {
+        var salario = Number(iptGrana.value);
+        pagar += 2000
+        var saldoAtualizado = salario + pagar
+        if(saldoAtualizado <= -1){
+            alert("Você pagou tudo meu nobre") 
+        }else{
+            ExibirGrana.innerHTML = `Grana atual R$${saldoAtualizado}.`
+        }
+    }
+</script>
