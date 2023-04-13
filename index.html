@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Insira a quantidade de takes: <input type="number" id="ipt_qtdTake"><br>
+    Insira a quantidade minima de que o Padrão 2 aparecerá: <input type="number" id="ipt_Padrao2">
+    <button onclick="Musica()">Simular</button>
+    <div id="exibirMsg" style="font-size: 10px;"></div>
+</body>
+
+</html>
+<script>
+    function Musica() {
+        var qtdTakes = Number(ipt_qtdTake.value)
+        var padrao2 = Number(ipt_Padrao2.value)
+        var contador = 1
+        
+        for(var i= 0; i<qtdTakes; i++){
+            while(contador <= padrao2 ){
+            if(contador == 1){
+                var nah = `Nah,`
+            }else if(contador > 1){
+                nah = nah + `nah,`
+                if(contador == padrao2){
+                    nah = nah + `<br>`
+                }
+            }
+            contador++
+
+        }
+        var qtdCaracter = nah.replaceAll(',','').replace('<br>','')
+        qtdCaracter = qtdCaracter.length
+        console.log(qtdCaracter)
+        if(qtdCaracter % 2 == 0){
+            console.log('par')
+            var musica =
+            `
+        <h1>Take ${i+1}</h1>
+        <br><br><br><br>
+    Hey, Jude, don't make it bad<br>
+    Take a sad song and make it better<br>
+    Remember to let her into your heart<br>
+    Then you can start to make it better<br>
+    <br><br><br>
+    Hey, Jude, don't be afraid<br>
+    You were made to go out and get her<br>
+    The minute you let her under your skin<br>
+    Then you begin to make it better<br>
+    <br><br><br>
+    And anytime you feel the pain, Hey, Jude, refrain<br>
+    Don't carry the world upon your shoulders<br>
+    For well you know that it's a fool<br>
+    Who plays it cool<br>
+    <br><br><br>
+
+
+    By making his world a little colder<br>
+    ${nah.fontcolor('red')}
+    Hey, Jude, don't let me down<br>
+    You have found her, now go and get her<br>
+    Remember to let her into your heart<br>
+    Then you can start to make it better<br>
+    <br><br><br>
+
+    So let it out and let it in, Hey, Jude, begin<br>
+    You're waiting for someone to perform with<br>
+    And don't you know that it's just you, Hey, Jude, you'll do<br>
+    <br><br><br>
+    
+    The movement you need is on your shoulder<br>
+    ${nah.fontcolor('red')}
+     Hey, Jude, don't make it bad<br>
+    Take a sad song and make it better<br>
+    Remember to let her under your skin<br>
+    Then you'll begin to make it better, better, better, better, better... oh!<br>
+    `
+        }else{
+            console.log('ímpar')
+            var musica =
+            `
+        <h1>Take ${i+1}</h1>
+        <br><br><br><br>
+    Hey, Jude, don't make it bad<br>
+    Take a sad song and make it better<br>
+    Remember to let her into your heart<br>
+    Then you can start to make it better<br>
+    <br><br><br>
+    Hey, Jude, don't be afraid<br>
+    You were made to go out and get her<br>
+    The minute you let her under your skin<br>
+    Then you begin to make it better<br>
+    <br><br><br>
+    And anytime you feel the pain, Hey, Jude, refrain<br>
+    Don't carry the world upon your shoulders<br>
+    For well you know that it's a fool<br>
+    Who plays it cool<br>
+    <br><br><br>
+
+
+    By making his world a little colder<br>
+    ${nah.fontcolor('blue')}
+    Hey, Jude, don't let me down<br>
+    You have found her, now go and get her<br>
+    Remember to let her into your heart<br>
+    Then you can start to make it better<br>
+    <br><br><br>
+
+    So let it out and let it in, Hey, Jude, begin<br>
+    You're waiting for someone to perform with<br>
+    And don't you know that it's just you, Hey, Jude, you'll do<br>
+    <br><br><br>
+    
+    The movement you need is on your shoulder<br>
+    ${nah.fontcolor('blue')}
+     Hey, Jude, don't make it bad<br>
+    Take a sad song and make it better<br>
+    Remember to let her under your skin<br>
+    Then you'll begin to make it better, better, better, better, better... oh!<br>
+    `
+        }
+        exibirMsg.innerHTML += musica
+       
+
+        }
+        
+        
+}
+</script>
