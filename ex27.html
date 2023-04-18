@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    num limite: <input type="number" min="1" id="limiteContagem">
+    num divisibilidade: <input type="number" min="1" id="ipt_divisibilidade">
+    <button onclick="Soma()">Somar Numeros</button>
+    <div class="" id="exibirMsg"></div>
+</body>
+</html>
+<script>
+    function Soma(){
+        var positivo = Number(limiteContagem.value)
+        var divisibilidade = Number(ipt_divisibilidade.value)
+        var i = 0
+        var arm
+        var soma = 0
+        if(divisibilidade >= 1 && divisibilidade <= positivo);
+        else{
+            alert('Insira o campo B menor que o numero positivo')
+        }
+        while(i < positivo){
+            if(positivo % divisibilidade == 0){
+                arm = divisibilidade*i
+                exibirMsg.innerHTML += `${arm}<br>`
+            }
+            i++
+            soma = soma + arm
+        }
+        exibirMsg.innerHTML += `Soma dos Múltiplos: ${soma}<br>`
+    }
+
+</script>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Insira um número: <input type="number" min="0" max="200" id="ipt_num">
+    <button onclick="Multiplos()">S2 Pares</button>
+    <div id="ExibirMsg"></div>
+</body>
+</html>
+<script>
+    function Multiplos(){
+        var numero = Number(ipt_num.value);
+        var contador = 0 
+        while(numero > contador )
+        {
+            contador-=numero
+            if(numero % 2 == 0){
+                ExibirMsg.innerHTML += `${numero}<br>`
+                numero -=2
+                if(numero == 0)contador = 0
+            }
+        } 
+    }
+</script>

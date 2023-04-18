@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    de quantos em quantos dias o usuário faz musculação : <input type="number" id="ipt_dayMuscle">
+    <button onclick="Rotina()">Exibir rotina mensal</button>
+    <div class="" id="ExibirMsg"></div>
+</body>
+</html>
+<script>
+    var dia = 1
+    function Rotina(){
+        var daysMuscle = Number(ipt_dayMuscle.value)
+
+        while(dia <= 30){
+            if(dia == 1 ||(daysMuscle+=daysMuscle)) {
+                ExibirMsg.innerHTML += `Dia ${dia} - Musculação<br>`
+            }
+            dia++
+           
+            ExibirMsg.innerHTML += `Dia ${dia} - normal<br>`
+            
+        }
+    }
+</script>

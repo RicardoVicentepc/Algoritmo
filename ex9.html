@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Insira um número : <input type="number" id="ipt_Num">
+    Insira uma frase : <input type="text" id="ipt_frase">
+    <button onclick="Papagaio()">Papagaio</button>
+</body>
+</html>
+<script>
+    function Papagaio(){
+        var contador = 1
+        var num = Number(ipt_Num.value)
+        while(contador <= num ){
+            alert(ipt_frase.value)
+            contador++
+        }
+    }
+</script>

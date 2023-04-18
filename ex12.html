@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Insira qual tabuada deseja saber: <input type="number" min="2" max="9" id="ipt_num">
+    Insira até qual numero deverá ir: <input type="number" id="ipt_numLimite">
+
+    <button onclick="Tabuada()">Ver Tabuada</button>
+    <div id="ExibirMsg"></div>
+</body>
+</html>
+<script>
+    var cal
+    var contador = 1
+    function Tabuada(){
+        var numero = Number(ipt_num.value);
+        var numeroLimite = Number(ipt_numLimite.value);
+        while(contador <= numeroLimite){
+            cal = contador * numero
+            if(contador % 2 == 0){
+                ExibirMsg.innerHTML += `<span style="color:blue;">${numero} x ${contador} = ${cal}<br>`
+            }else{
+                ExibirMsg.innerHTML += `<span style="color:red;">${numero} x ${contador} = ${cal}<br>`
+            }
+            contador++
+        }
+    }
+</script>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Insira a quantidade de volta : <input type="number" id="ipt_voltas"><br>
+    <button onclick="Corrida()">Iniciar Corrida</button>
+    <div id="ExibirMsg"></div>
+</body>
+</html>
+<script>
+    function Corrida(){
+    var contador = 0;
+    var volta = Number(ipt_voltas.value)
+    while(contador < volta){
+        contador++
+        ExibirMsg.innerHTML += `Carro dando a ${contador}° volta<br>`
+        
+    }
+    if(contador == volta){
+        ExibirMsg.innerHTML += `Corrida Finalizada!`
+    }
+}
+
+</script>
